@@ -3,7 +3,32 @@ package com.company;
 public class Human {
         public String fName;
         public String lName;
-        public String phone;
+        protected Phone phone;
         protected Animal pet;
         protected Car auto;
+        private Double salary = 31233.23;
+
+        public Human(String firstName, String lastName) {
+                this.fName = firstName;
+                this.lName = lastName;
+
+        }
+        public double getSalary(){
+                System.out.println(java.time.LocalDate.now());
+                System.out.println(this.salary);
+
+                return salary;
+
+        }
+        public void setSalary(double salary){
+                if (salary > 0) {
+                        System.out.println("Dane zostały zaksięgowane");
+                        System.out.println("Należy koniecznie odebrać aneks od Pani Basi z działu kadr");
+                        System.out.println("ZUS i US już wiedzą....już nadchodzą");
+                        this.salary = salary;
+
+                }else {
+                        System.out.println("Wynagrodzenie nie może być ujemne");
+                }
+        }
 }
