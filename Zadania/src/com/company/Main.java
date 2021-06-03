@@ -5,9 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Human me = new Human();
-        me.fName = "Pawel";
-        me.lName = "Pietrolaj";
+        Human my = new Human();
+        my.fName = "Pawel";
+        my.lName = "Pietrolaj";
+        my.pet = cat;
 
 
         Phone OnePlus = new Phone();
@@ -15,6 +16,18 @@ public class Main {
         OnePlus.producer = "OnePlus";
         OnePlus.model = "6";
         OnePlus.System = "Android11";
+
+        Animal cat = new Animal("cat");
+
+        cat.feed();
+        cat.feed();
+        cat.feed();
+        cat.feed();
+        cat.walk();
+        cat.walk();
+        cat.walk();
+        cat.walk();
+        cat.walk();
 
 
     }

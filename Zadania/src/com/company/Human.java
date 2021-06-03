@@ -1,9 +1,8 @@
 package com.company;
 
 public class Human {
-
-        String fName;
-        String lName;
-        String Phone;
-
+        public String fName;
+        public String lName;
+        public String phone;
+        protected Animal pet;
 }
