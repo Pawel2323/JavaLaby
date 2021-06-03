@@ -6,6 +6,7 @@ public class Animal {
     public String name;
 
 
+
     static final public double DEFAULT_ANIMAL_WEIGHT = 1.0;
     static final public double DEFAULT_DOG_WEIGHT = 3.0;
     static final public double DEFAULT_CAT_WEIGHT = 2.0;
@@ -44,5 +45,14 @@ public class Animal {
             weight -= 1;
             System.out.println(species + "Give me foodie :(");
         }
+    }
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+
+                '}';
     }
 }
