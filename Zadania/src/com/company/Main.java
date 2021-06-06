@@ -1,4 +1,5 @@
 package com.company;
+import com.company.creatures.Pet;
 import com.company.devices.Phone;
 
 public class Main {
@@ -11,21 +12,16 @@ public class Main {
         System.out.println(OnePlus.model);
 
 
-    Human Pawel = new Human("PAwel","Pietrolaj","OnePlus");
-    Pawel.pet = new Animal("cat");
-    Pawel.cash = 5000.00;
-    Human Friend = new Human("Jaś","Kowalksi","Iphone");
-    Friend.cash = 300.00;
-    Friend.pet = new Animal("dog");
+        Human Pawel = new Human("PAwel","Pietrolaj","OnePlus");
+        Pawel.pet = new Pet("cat");
+        Pawel.cash = 5000.00;
+        Human Friend = new Human("Jaś","Kowalksi","Iphone");
+        Friend.cash = 300.00;
+        Friend.pet = new Pet("dog");
 
-    Friend.pet.sell(Friend,Pawel,50.00);
+        Friend.pet.sell(Friend,Pawel,50.00);
+        Pet Garfield = new Pet("Cat");
+        Garfield.feed();
     }
 
 }
-
-
-
-
-
-
-

@@ -3,7 +3,6 @@ import com.company.Human;
 public class Phone extends Devices {
     final public Double screenSize;
     final public String System;
-
     public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String System) {
         super(model, producer, yearofproduction);
         this.screenSize = screenSize;
@@ -15,7 +14,7 @@ public class Phone extends Devices {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-        
+
     }
 
 
