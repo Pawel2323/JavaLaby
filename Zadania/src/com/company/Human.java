@@ -1,68 +1,62 @@
 package com.company;
-import devices.Car;
+import com.company.devices.Car;
 
-public class Human {
+public class Human extends Animal{
         public String fName;
         public String lName;
-        protected String phone;
+        public String phone;
         protected Animal pet;
         protected Car auto;
-        private Double salary = 31233.23;
+        private Double salary;
 
-
-        public Human(String firstName, String lastName) {
-                this.fName = firstName;
-                this.lName = lastName;
-
+        public Human(String fName, String lName, String phone) {
+                super("homosapiens");
+                this.fName = fName;
+                this.lName = lName;
+                this.phone = phone;
+                this.salary = 23892183.00;
         }
-
-        public double getSalary() {
+        public Double getSalary() {
                 System.out.println(java.time.LocalDate.now());
                 System.out.println(this.salary);
-
                 return salary;
-
         }
-
         public void setSalary(double salary) {
                 if (salary > 0) {
-                        System.out.println("Dane zostały zaksięgowane");
-                        System.out.println("Należy koniecznie odebrać aneks od Pani Basi z działu kadr");
-                        System.out.println("ZUS i US już wiedzą....już nadchodzą");
+                        System.out.println("Dane zostały wysłane do systemu księgowego");
+                        System.out.println("Nalezy koniecznie odebrać aneks do umowy od Pani Hani z kadr");
+                        System.out.println("ZUS i US już po Ciebie idą");
                         this.salary = salary;
-
-                } else {
-                        System.out.println("Wynagrodzenie nie może być ujemne");
+                }
+                else {
+                        System.out.println("Nie mozna wpisać ujemnej wartosci wynagrodzenia");
                 }
         }
         public Car getCar() {
                 return auto;
         }
-
         public void setCar(Car auto) {
                 if (salary > auto.value) {
                         this.auto = auto;
-                        System.out.println("Udało się zakupić samochód");
+                        System.out.println("Kupiłeś samochód");
                 }
                 else if (salary > (auto.value) / 12) {
                         this.auto = auto;
-                        System.out.println("Udało się kupić samochó na raty :)");
-
+                        System.out.println("Kupiłeś samochód na raty");
                 }
                 else {
-                        System.out.println("Rusz się do pracy");
+                        System.out.println("Do roboty!!!!");
                 }
         }
         @Override
         public String toString() {
                 return "Human{" +
-                        "firstName='" + fName + '\'' +
-                        ", lastName='" + lName + '\'' +
+                        "fName='" + fName + '\'' +
+                        ", lName='" + lName + '\'' +
                         ", phone='" + phone + '\'' +
                         ", pet=" + pet +
                         ", auto=" + auto +
                         ", salary=" + salary +
                         '}';
         }
-
 }
