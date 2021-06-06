@@ -83,12 +83,16 @@ public class Human {
     public double getGarageValue() {
         double value = 0.0;
         for (int i = 0; i < garage.length; i++) {
-            if (garage[i] != null) {
-                value += garage[i].value;
+            for (Car car : garage) {
+                value += car.value;
             }
         }
         return value;
     }
+    public void sell(Human me, Human brother, Double price) {
+    }
+
+
 
     public boolean hasCar(Car car) {
         for (int i = 0; i < garage.length; i++) {
@@ -122,6 +126,9 @@ public class Human {
                 garage[i] = carToAdd;
                 return;
             }
+
+
+            }
+
         }
-    }
 }

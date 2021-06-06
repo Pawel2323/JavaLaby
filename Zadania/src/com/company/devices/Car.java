@@ -1,11 +1,13 @@
 package com.company.devices;
 import com.company.Human;
 
+import java.util.ArrayList;
+
 
 public abstract class Car extends Devices {
     private final String color;
     public Double value;
-
+    public ArrayList<Human> Owners = new ArrayList<>();
     public Car(String producer, String model, String color, Double value, Integer yearOfProduction) {
         super(producer, model, yearOfProduction);
         this.color = color;
@@ -34,7 +36,31 @@ public abstract class Car extends Devices {
     }
 
 
+    public Human getCurrentOwner() {
+        if (Owners.isEmpty())
+            return null;
+        else
+            return Owners.get(Owners.size() - 1);
+    }
+
+    public void addOwner(Human Friend) {
+        Owners.add(Friend);
+    }
+
+    public boolean wasOwner(Human Friend) {
+        return Owners.contains(Friend);
+    }
+
+    public int transaction() {
+        return Owners.size();
+    }
+
+
+
 }
+
+
+
 
 
 
