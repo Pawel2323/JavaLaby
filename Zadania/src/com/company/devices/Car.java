@@ -15,21 +15,29 @@ public abstract class Car extends Devices {
         System.out.println("wlacz/wyłącz silnik");
     }
 
-    public void sell(Human seller, Human buyer, Double price) {
-        if (seller.auto != this) {
-            System.out.println("Nie możesz tego sprzedac");
-        } else if (buyer.cash < price) {
-            System.out.println("Nie masz środkó");
-        } else {
-            seller.cash += price;
-            buyer.cash -= price;
-            buyer.auto = seller.auto;
-            seller.auto = null;
-            System.out.println("Udana transakcja");
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (!seller.hasCar(this)) {
+            throw new Exception("Sprzedawca nie ma auta");
         }
+        if (!buyer.hasFreeParkingLot()) {
+            throw new Exception("Kupujący nie ma miejsca");
+        }
+        if (buyer.cash < price) {
+            throw new Exception("Kupujący nie ma kasy");
+        }
+
+        seller.removeCar(this);
+        buyer.addCar(this);
+        seller.cash += price;
+        buyer.cash -= price;
+        System.out.println("Sprzedano auto");
     }
-    public abstract  void fuel();
+
+
 }
+
+
+
 
 
 //  @Override

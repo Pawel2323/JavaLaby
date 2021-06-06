@@ -12,10 +12,7 @@ public class Diesel extends Car {
 
 
 
-
-    @Override
-    public void fuel() {
-    System.out.println("Do pełna");
+    public void refuel() {
 
     }
 }

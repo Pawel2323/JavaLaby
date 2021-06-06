@@ -4,6 +4,7 @@ import com.company.Human;
 import com.company.Selleable;
 
 public abstract  class Devices implements Selleable {
+    public double value;
     public final String model;
     public final String producer;
     public final Integer yearofproduction;
@@ -24,5 +25,5 @@ public abstract  class Devices implements Selleable {
         System.out.println("Włączono urządzenie");
     }
 
-    public abstract void sell(Human seller, Human buyer, Double price);
+    public abstract void sell(Human seller, Human buyer, Double price) throws Exception;
 }

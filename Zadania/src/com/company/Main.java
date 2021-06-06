@@ -41,6 +41,7 @@ public class Main {
                 Friend.pet.sell(Friend, Pawel, 50.00);
                 Pet Garfield = new Pet("Cat");
                 Garfield.feed();
+
             }
         }
 

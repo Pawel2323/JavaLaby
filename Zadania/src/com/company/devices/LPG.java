@@ -11,7 +11,7 @@ public class LPG extends Car {
 
 
 
-    @Override
+
     public void fuel() {
         System.out.println("Do pełna");
     }
