@@ -5,9 +5,10 @@ public class Human extends Animal{
         public String fName;
         public String lName;
         public String phone;
-        protected Animal pet;
-        protected Car auto;
+        public Animal pet;
+        public Car auto;
         private Double salary;
+        public Double cash;
 
         public Human(String fName, String lName, String phone) {
                 super("homosapiens");
