@@ -2,7 +2,7 @@ package com.company.devices;
 import com.company.Human;
 
 
-public class Car extends Devices {
+public abstract class Car extends Devices {
     private final String color;
     public Double value;
 
@@ -28,6 +28,7 @@ public class Car extends Devices {
             System.out.println("Udana transakcja");
         }
     }
+    public abstract  void fuel();
 }
 
 
